@@ -1,0 +1,23 @@
+<h2>Listado de propietarios</h2>
+          <div class="table-responsive">
+            <table class="table table-striped table-sm">
+              <thead>
+                <tr>
+                  <th>N°</th>
+                  <th>Apartamento</th>
+                  <th>Propietario</th>
+                  <th>Coeficiente</th>
+                  <th>Cédula</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let propietario of propietarios">
+                  <td>{{propietario.id}}</td>
+                  <td>{{propietario.apartamento}}</td>
+                  <td>{{propietario.nombrePropietario}}</td>
+                  <td>{{propietario.coef}}</td>
+                  <td>{{propietario.cedula}}</td>
+                </tr>                
+              </tbody>
+            </table>
+          </div>
