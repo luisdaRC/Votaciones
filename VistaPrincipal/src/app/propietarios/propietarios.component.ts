@@ -12,7 +12,16 @@ export class PropietariosComponent implements OnInit {
   constructor(private propietarioservice:PropietarioService ) { }
 
   ngOnInit() {
-    this.propietarios=this.propietarioservice.getPropietarios();
+    this.propietarioservice.getPropietarios().subscribe(
+      propietarios=>this.propietarios=propietarios
+      /**
+       * Es lo mismo que:
+       * function(propietarios){ this.propietarios=propietarios}
+       * 
+       * cuando hay varios parametros
+       * (param1,param2, ...) => { some code}
+       */
+    );
   }
   
 

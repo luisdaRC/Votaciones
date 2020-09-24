@@ -7,7 +7,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { PropietariosComponent } from './propietarios/propietarios.component';
-
+import { PropietarioService } from './propietarios/propietario.service'
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +20,7 @@ import { PropietariosComponent } from './propietarios/propietarios.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [PropietarioService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
