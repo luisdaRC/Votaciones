@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Propietario} from './propietario';
-import {PROPIETARIOS} from './propietarios.json';
+import {PropietarioService} from './propietario.service';
 
 @Component({
   selector: 'app-propietarios',
@@ -8,11 +8,12 @@ import {PROPIETARIOS} from './propietarios.json';
   
 })
 export class PropietariosComponent implements OnInit {
-
-  constructor() { }
+  propietarios:Propietario[]
+  constructor(private propietarioservice:PropietarioService ) { }
 
   ngOnInit() {
+    this.propietarios=this.propietarioservice.getPropietarios();
   }
-  propietarios:Propietario[]=PROPIETARIOS;
+  
 
 }
